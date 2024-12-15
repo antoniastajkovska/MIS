@@ -1,4 +1,4 @@
-# clothing_store1
+# joke_app
 
 A new Flutter project.
 

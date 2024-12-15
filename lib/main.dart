@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'screens/clothing_list_screen.dart';
-import 'screens/details_screen.dart';
+import 'package:joke_app/screens/home.dart';
+import 'package:joke_app/screens/jokes_list.dart';
+import 'package:joke_app/screens/random_joke.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,14 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Clothing App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Joke App',
+      theme: ThemeData(primarySwatch: Colors.blue),
       initialRoute: '/',
       routes: {
-        '/': (context) => const ClothingListScreen(),
-        '/details': (context) => const DetailsScreen(),
+        '/': (context) => const Home(),
+        '/jokes_list': (context) => const JokesList(),
+        '/random_joke': (context) => const RandomJoke(),
       },
     );
   }
